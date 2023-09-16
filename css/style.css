@@ -72,7 +72,6 @@ h2 {
 h4 {
     font-size: 22px;
     color: #fff;
-    margin-right: -40px;
 }
 
 a {
@@ -84,8 +83,15 @@ a {
     background: #420f6b;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
     align-items: center;
+}
+
+#navbar {
+    animation: slidefromLeft 1s ease;
+}
+
+.profile {
+    animation: slidefromRight 1s ease;
 }
 
 #nav #navbar,
@@ -94,7 +100,7 @@ a {
 }
 
 .profile img {
-    width: 10%;
+    width: 15%;
     margin: auto;
 }
 
@@ -103,6 +109,7 @@ a {
     background-size: cover;
     background-position: center;
     text-align: center;
+    animation: slidefromTop 1s ease;
 }
 
 .container {
@@ -165,13 +172,14 @@ footer {
 
 /* media query */
 @media (max-width: 799px) {
-#nav{
-    display: block;
-    margin: auto;
-}
-#nav .profile{
-    margin: 0 50px;
-}
+    #nav {
+        display: block;
+        margin: auto;
+    }
+
+    #nav .profile {
+        margin: 0 50px;
+    }
 
 }
 
@@ -197,5 +205,37 @@ footer {
 
     .col h4 {
         margin: 5px 0;
+    }
+}
+
+/* animination */
+
+@keyframes slidefromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slidefromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slidefromTop {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
     }
 }
